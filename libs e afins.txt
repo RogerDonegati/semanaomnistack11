@@ -1,0 +1,29 @@
+npm = instala
+npx = executa
+jsx = html escrito dentro do js
+https://fonts.google.com/
+
+
+Dependencias:
+
+Query Builder e driver do BD desejado
+npm install knex 
+npm install sqlite3
+npx knex init
+
+npm install cors (lib de segurança por url e tal)
+
+
+Dependencia de desenvolvimento:
+
+Serve pra reiniciar o servidor js sozinho (precisa criar o script no package.json pra inicia-lo)
+npm install nodemon -D
+
+
+
+Knex Migrations comands:
+http://knexjs.org/#Installation-migrations
+
+npx knex migrate:make create_ongs cria migrations
+npx knex migrate:latest cria tabelas
+npx knex migrate:rollback volta
