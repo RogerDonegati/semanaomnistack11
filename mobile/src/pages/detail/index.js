@@ -23,16 +23,13 @@ export default function(){
     function sendMail(){
         MailerComposer.composeAsync({
             subject: `Herói do caso: ${incident.title}`,
-            recipients: ["roger.donegati@gmail.com "],
-            // recipients: [incident.email],
+            recipients: [incident.email],
             body: message,
         })
     }
 
     function sendWhatsApp(){
-        const customMessage = 'O loco, realmente fiquei deslumbrada com essa aplicação deveras supreendente, muito bom, mandou bem demais!!!!'
-        Linking.openURL(`whatsapp://send?phone=+5511948070347&text=${customMessage}`);
-        // Linking.openURL(`whatsapp://send?phone=${incident.whatsapp}&text=${customMessage}`);
+        Linking.openURL(`whatsapp://send?phone=${incident.whatsapp}&text=${message}`);
     }
 
     return(
